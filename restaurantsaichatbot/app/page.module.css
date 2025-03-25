@@ -34,6 +34,7 @@
   gap: 2rem;
   flex: 1;
   min-height: 0;
+  position: relative;
 }
 
 .menuSection {
@@ -46,6 +47,8 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   min-width: 0;
+  height: calc(100vh - 200px); /* Adjust based on header height */
+  overflow-y: auto;
 }
 
 .menuImage {
@@ -57,6 +60,7 @@
   justify-content: center;
   color: white;
   text-align: center;
+  flex-shrink: 0;
 }
 
 .imagePlaceholder h2 {
@@ -72,6 +76,7 @@
   border-bottom: 1px solid #eee;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
+  flex-shrink: 0;
 }
 
 .categoryTab {
@@ -98,8 +103,8 @@
 
 .menuList {
   padding: 1.5rem;
-  overflow-y: auto;
   flex: 1;
+  overflow-y: auto;
 }
 
 .menuCategory {
@@ -162,6 +167,10 @@
   display: flex;
   flex-direction: column;
   min-width: 0;
+  position: sticky;
+  top: 1rem;
+  height: calc(100vh - 100px);
+  max-height: calc(100vh - 100px);
 }
 
 .chatHeader {
@@ -170,6 +179,7 @@
   padding: 1rem;
   border-radius: 12px 12px 0 0;
   text-align: center;
+  flex-shrink: 0;
 }
 
 .chatHeader h2 {
@@ -263,6 +273,7 @@
   background: #fff;
   border-top: 1px solid #eee;
   gap: 0.5rem;
+  flex-shrink: 0;
 }
 
 .input {
@@ -316,6 +327,13 @@
   }
 
   .menuSection, .chatSection {
+    height: auto;
+    max-height: none;
+    position: relative;
+    top: 0;
+  }
+
+  .menuSection {
     height: 50vh;
   }
 }
