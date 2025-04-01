@@ -5,25 +5,54 @@ import styles from './page.module.css';
 // Menu data structure containing all restaurant items organized by category
 const menuItems = {
   appetizers: [
-    { id: 1, name: 'Bruschetta', price: 8.99, description: 'Toasted bread with tomatoes, garlic, and basil' },
-    { id: 2, name: 'Calamari', price: 12.99, description: 'Crispy fried squid with marinara sauce' },
-    { id: 3, name: 'Caprese Salad', price: 10.99, description: 'Fresh mozzarella, tomatoes, and basil' },
+    { id: 1, name: 'Buffalo Wings', price: 12.99, description: 'Crispy chicken wings tossed in our signature buffalo sauce, served with blue cheese dressing and celery sticks' },
+    { id: 2, name: 'Nachos Supreme', price: 11.99, description: 'Tortilla chips topped with melted cheese, ground beef, black beans, jalapeños, sour cream, and guacamole' },
+    { id: 3, name: 'Mozzarella Sticks', price: 8.99, description: 'Breaded mozzarella cheese sticks served with marinara sauce' },
+    { id: 4, name: 'Onion Rings', price: 7.99, description: 'Crispy beer-battered onion rings served with ranch dressing' },
+    { id: 5, name: 'Spinach Artichoke Dip', price: 9.99, description: 'Creamy blend of spinach, artichokes, and melted cheese served with tortilla chips' },
+    { id: 6, name: 'Pretzel Bites', price: 8.99, description: 'Soft pretzel bites served with beer cheese sauce and mustard' },
   ],
-  mainCourses: [
-    { id: 4, name: 'Margherita Pizza', price: 16.99, description: 'Classic tomato sauce, mozzarella, and basil' },
-    { id: 5, name: 'Spaghetti Carbonara', price: 18.99, description: 'Pasta with eggs, cheese, pancetta, and black pepper' },
-    { id: 6, name: 'Grilled Salmon', price: 24.99, description: 'Fresh salmon with seasonal vegetables' },
+  burgers: [
+    { id: 7, name: 'Classic Cheeseburger', price: 12.99, description: '1/3 lb beef patty with American cheese, lettuce, tomato, and onion on a brioche bun' },
+    { id: 8, name: 'Bacon BBQ Burger', price: 14.99, description: 'Beef patty topped with crispy bacon, BBQ sauce, and onion rings' },
+    { id: 9, name: 'Mushroom Swiss Burger', price: 13.99, description: 'Beef patty with sautéed mushrooms and melted Swiss cheese' },
+    { id: 10, name: 'Spicy Jalapeño Burger', price: 13.99, description: 'Beef patty with fresh jalapeños, pepper jack cheese, and chipotle mayo' },
+    { id: 11, name: 'Bacon Blue Burger', price: 14.99, description: 'Beef patty with crumbled blue cheese, bacon, and caramelized onions' },
   ],
-  desserts: [
-    { id: 7, name: 'Tiramisu', price: 8.99, description: 'Classic Italian coffee-flavored dessert' },
-    { id: 8, name: 'Gelato', price: 6.99, description: 'Italian ice cream with various flavors' },
-    { id: 9, name: 'Cannoli', price: 7.99, description: 'Crispy pastry filled with sweet ricotta' },
+  sandwiches: [
+    { id: 12, name: 'Club Sandwich', price: 11.99, description: 'Triple-decker with turkey, bacon, lettuce, tomato, and mayo' },
+    { id: 13, name: 'Philly Cheesesteak', price: 13.99, description: 'Sliced steak with onions, peppers, and melted provolone cheese' },
+    { id: 14, name: 'Chicken Tender Sandwich', price: 10.99, description: 'Crispy chicken tenders with lettuce, tomato, and honey mustard' },
+    { id: 15, name: 'BLT', price: 10.99, description: 'Bacon, lettuce, and tomato on toasted bread' },
+    { id: 16, name: 'Reuben', price: 12.99, description: 'Corned beef, sauerkraut, Swiss cheese, and Russian dressing on rye bread' },
+  ],
+  sides: [
+    { id: 17, name: 'French Fries', price: 4.99, description: 'Crispy golden fries seasoned with our special blend of spices' },
+    { id: 18, name: 'Sweet Potato Fries', price: 5.99, description: 'Crispy sweet potato fries with cinnamon sugar seasoning' },
+    { id: 19, name: 'Tater Tots', price: 5.99, description: 'Crispy potato tots served with ranch dressing' },
+    { id: 20, name: 'Mac & Cheese', price: 6.99, description: 'Creamy macaroni and cheese with a blend of cheddar and mozzarella' },
+    { id: 21, name: 'Coleslaw', price: 3.99, description: 'Creamy coleslaw with cabbage and carrots' },
   ],
   drinks: [
-    { id: 10, name: 'Italian Red Wine', price: 9.99, description: 'House red wine' },
-    { id: 11, name: 'Espresso', price: 3.99, description: 'Traditional Italian coffee' },
-    { id: 12, name: 'Limoncello', price: 7.99, description: 'Italian lemon liqueur' },
+    { id: 22, name: 'Domestic Beer', price: 5.99, description: 'Selection of domestic beers (Budweiser, Coors, Miller)' },
+    { id: 23, name: 'Craft Beer', price: 7.99, description: 'Rotating selection of local craft beers' },
+    { id: 24, name: 'House Margarita', price: 8.99, description: 'Fresh lime juice, tequila, and triple sec' },
+    { id: 25, name: 'Old Fashioned', price: 9.99, description: 'Bourbon, bitters, sugar, and orange peel' },
+    { id: 26, name: 'Soda', price: 2.99, description: 'Various soft drinks (Coke, Sprite, Dr. Pepper)' },
+    { id: 27, name: 'Iced Tea', price: 2.99, description: 'Fresh brewed iced tea with optional sweetener' },
   ],
+  desserts: [
+    { id: 28, name: 'Chocolate Lava Cake', price: 6.99, description: 'Warm chocolate cake with a molten center, served with vanilla ice cream' },
+    { id: 29, name: 'Apple Pie', price: 5.99, description: 'Classic apple pie served with whipped cream' },
+    { id: 30, name: 'Ice Cream Sundae', price: 6.99, description: 'Vanilla ice cream with hot fudge, nuts, and a cherry on top' },
+    { id: 31, name: 'Churros', price: 5.99, description: 'Crispy cinnamon-sugar churros with chocolate dipping sauce' },
+    { id: 32, name: 'Milkshake', price: 7.99, description: 'Thick and creamy milkshake in various flavors (vanilla, chocolate, strawberry)' },
+  ],
+  specials: [
+    { id: 33, name: 'Wing Wednesday', price: 0.99, description: 'Half-price wings every Wednesday' },
+    { id: 34, name: 'Happy Hour', price: 0.00, description: 'Half-price appetizers and $2 off drinks, Monday-Friday 4-7pm' },
+    { id: 35, name: 'Weekend Brunch', price: 0.00, description: 'All-you-can-eat brunch buffet, Saturday-Sunday 10am-2pm' },
+  ]
 };
 
 export default function Home() {
